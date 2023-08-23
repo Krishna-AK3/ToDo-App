@@ -3,7 +3,15 @@ import { Grid, Menu, Button } from 'semantic-ui-react';
 import { maxBoardsSize, IBoardTabsAreaProps } from '../../Constants';
 
 const BoardItemsArea = (props: IBoardTabsAreaProps) => {
-    const { data, activeBoardItem, boardListSize, setActiveBoardItem, setAddNewTodo, setBoardListSize, setData } = props;
+    const {
+        data, 
+        activeBoardItem, 
+        boardListSize, 
+        setActiveBoardItem, 
+        setAddNewTodo, 
+        setBoardListSize, 
+        setData
+    } = props;
 
     const onBoardTabClick = (_e: any, {name}: any) => {
         setActiveBoardItem(name);

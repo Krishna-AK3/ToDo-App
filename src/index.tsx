@@ -4,13 +4,17 @@ import './index.css';
 import "semantic-ui-css/semantic.min.css";
 import HomePage from './Components/HomePage';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <HomePage />
+    <Provider store={store} >
+      <HomePage />
+    </Provider>
   </React.StrictMode>
 );
 
